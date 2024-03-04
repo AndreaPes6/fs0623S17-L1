@@ -16,7 +16,9 @@ namespace AgenziaCheSpedisce.Models
         public string Username { get; set; }
 
         [Required(ErrorMessage = "Campo obbligatorio")]
-        [StringLength(15, MinimumLength = 8, ErrorMessage = "Min 8, max 15 caratteri")]
+        [StringLength(30, MinimumLength = 12, ErrorMessage = "Min 8, max 15 caratteri")]
+
         public string Password { get; set; }
+
     }
 }
