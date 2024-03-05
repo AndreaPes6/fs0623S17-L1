@@ -18,8 +18,13 @@ namespace AgenziaCheSpedisce.Controllers
             return View();
         }
 
+        public ActionResult LoginAdmin()
+        {
+            return View();
+        }
+
         [HttpPost]
-        public ActionResult Index(AdminUser AdminUser)
+        public ActionResult LoginAdmin(AdminUser AdminUser)
         {
             string connString = ConfigurationManager.ConnectionStrings["AgenziaCheSpedisceDB"].ToString();
             var conn = new SqlConnection(connString);
@@ -36,7 +41,7 @@ namespace AgenziaCheSpedisce.Controllers
                 return RedirectToAction("Index", "Login");
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction("LoginAdmin");
         }
 
         [Authorize]
@@ -53,8 +58,10 @@ namespace AgenziaCheSpedisce.Controllers
         {
             FormsAuthentication.SignOut();
 
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("LoginAdmin", "Login");
 
         }
+
+
     }
 }

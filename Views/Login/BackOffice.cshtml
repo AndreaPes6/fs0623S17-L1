@@ -1,10 +1,10 @@
 ﻿@{
-    ViewBag.Title = "Pagina Loggata";
+    ViewBag.Title = "BackOffice";
 }
 
-<h2>Pagina Loggata</h2>
+<h2>Pagina Admin - BackOffice</h2>
 
-L'id dell'utente loggato è: @ViewBag.Id
+L'id dell'Admin loggato è: @ViewBag.Id
 
 @using (Html.BeginForm("Logout", "Login", FormMethod.Post, new { @class = "logout-form" }))
 {
