@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Pagina Loggata";
+}
+
+<h2>Pagina Loggata</h2>
+
+L'id dell'utente loggato è: @ViewBag.Id
+
+@using (Html.BeginForm("Logout", "Login", FormMethod.Post, new { @class = "logout-form" }))
+{
+    @Html.AntiForgeryToken()
+    <button type="submit" class="btn btn-primary">Logout</button>
+}

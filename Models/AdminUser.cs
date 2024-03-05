@@ -6,10 +6,10 @@ using System.Web;
 
 namespace AgenziaCheSpedisce.Models
 {
-    public class User
+    public class AdminUser
     {
         [Key]
-        public int UserId { get; set; }
+        public int Id { get; set; }
 
         [Required(ErrorMessage = "Campo obbligatorio")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Min 3, max 20 caratteri")]
